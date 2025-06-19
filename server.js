@@ -34,7 +34,7 @@ app.post('/download', async (req, res) => {
     if (videoUrl) {
       res.send(`<h3>✅ Direct Download Link:</h3><a href="${videoUrl}" target="_blank">Download Video</a><br><br><a href="/">Back</a>`);
     } else {
-      res.send('❌ Could not extract video. Double-check the Reel URL or privacy settings.');
+      res.send('❌ Could not extract video. Check if the Reel is public and URL is correct.');
     }
   } catch (err) {
     res.send(`Error: ${err.message}`);
